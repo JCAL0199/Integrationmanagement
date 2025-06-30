@@ -24,38 +24,25 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: dispersion-ordinaria-imss
-  description: Dispersión Ordinaria IMSS
+  name: reintegro-de-semanas
+  description: Reintegro de Semanas
   tags:
     - proceso-negocio
 spec:
   type: negocio
   lifecycle: experimental
   owner: group:default/developers
-  subcomponentOf: component:default/service-flask
+  subcomponentOf: component:default/integrationmanagement
 ---
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: carga-archivo
-  description: Dispersión Ordinaria IMSS/Carga Archivo -Edición
+  name: revision-cifras-control
+  description: Reintegro de Semanas/Revisión de Cifras de Control
   tags:
     - sub-etapa
 spec:
   type: subetapa
   lifecycle: experimental
   owner: group:default/developers
-  subcomponentOf: component:default/dispersion-ordinaria-imss
----
-apiVersion: backstage.io/v1alpha1
-kind: Component
-metadata:
-  name: idc
-  description: Dispersión Ordinaria IMSS/IDC
-  tags:
-    - sub-etapa
-spec:
-  type: subetapa
-  lifecycle: experimental
-  owner: group:default/developers
-  subcomponentOf: component:default/dispersion-ordinaria-imss
+  subcomponentOf: component:default/reintegro-de-semanas
